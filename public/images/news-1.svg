@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="news1Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5c7057" />
+      <stop offset="100%" stop-color="#29332a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#news1Bg)" />
+  <circle cx="400" cy="220" r="160" fill="#445840" opacity="0.6" />
+  
+  <g transform="translate(340, 150)" stroke="#FAF9F6" stroke-width="4" fill="none">
+    <path d="M 60 120 C 20 120 10 70 60 50 C 40 10 90 20 100 40 C 130 10 160 50 140 80 C 170 110 120 140 60 120 Z" fill="#b7cdaf" opacity="0.3"/>
+  </g>
+  
+  <text x="400" y="380" font-family="'Epilogue', sans-serif" font-size="24" font-weight="700" fill="#FAF9F6" text-anchor="middle">TEKNIK SLOW-ROAST 6 JAM</text>
+  <text x="400" y="420" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" fill="#ceebc5" text-anchor="middle">Rahasia Kulit Crispy &amp; Bumbu Meresap</text>
+</svg>
+

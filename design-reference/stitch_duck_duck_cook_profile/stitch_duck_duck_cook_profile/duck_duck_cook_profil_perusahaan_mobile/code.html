@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-bright": "#f1fdee", "on-surface": "#141e15", "surface-tint": "#50644b", "primary-fixed": "#d3e9ca", "tertiary-container": "#5a7156", "inverse-on-surface": "#e8f4e6", "on-tertiary-fixed": "#0c200c", "surface-container-high": "#e0ebde", "surface-dim": "#d2ddd0", "inverse-surface": "#29332a", "surface-container-low": "#ebf7e9", "surface-cream": "#FAF9F6", "on-primary": "#ffffff", "on-primary-fixed-variant": "#394c35", "background": "#f1fdee", "outline": "#747870", "primary-fixed-dim": "#b7cdaf", "on-tertiary-container": "#daf4d3", "on-primary-container": "#dcf3d4", "border-soft": "#ACC5A6", "on-surface-variant": "#444841", "surface-container-lowest": "#ffffff", "on-background": "#141e15", "surface": "#f1fdee", "secondary-fixed-dim": "#b2ceaa", "on-tertiary": "#ffffff", "on-error": "#ffffff", "surface-variant": "#dae6d8", "primary": "#445840", "tertiary-fixed": "#d0eac9", "secondary-container": "#ceebc5", "inverse-primary": "#b7cdaf", "on-secondary-container": "#526b4d", "on-secondary-fixed": "#0a2009", "outline-variant": "#c4c8be", "tertiary": "#425840", "on-secondary": "#ffffff", "secondary-fixed": "#ceebc5", "tertiary-fixed-dim": "#b4cdae", "surface-container-highest": "#dae6d8", "on-secondary-fixed-variant": "#354d31", "secondary": "#4c6547", "surface-mint-subtle": "#E8F5E9", "text-muted": "#3B4739", "on-primary-fixed": "#0e1f0d", "surface-container": "#e6f1e3", "error-container": "#ffdad6", "on-error-container": "#93000a", "white": "#FFFFFF", "on-tertiary-fixed-variant": "#374c34", "error": "#ba1a1a", "primary-container": "#5c7057", "surface-mint-tint": "#D1EDD3" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2.5rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "margin": "2rem", "space-sm": "0.5rem", "space-md": "1rem" }, fontFamily: { "headline-sm": ["Epilogue"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Epilogue"], "title-lg": ["Plus Jakarta Sans"], "display-lg": ["Epilogue"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Epilogue"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Epilogue"], "label-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Epilogue"], "title-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrAo6DTkPFgumU9l5rms-HyYQBf4nLQfOOa4mZN0XquL1m7tCYuPQe13m1795kz_tFz1pzcVsr7m6_90-DUDF8dvXgMt01jjS4DYSB2S2KnRST4Qw7xi6CYM3rlW251PhuWsDDTw2B3tcAHV-Pi0MTHGxxJGe_Qb43QAOeROrUbQDUGF8G75io7EpaokYHCdhHi7eiVQy-M9-CJgNlCZKX_3NZXMzASEG88auAK5LsYn4Jc2o2yJsXFXVdsa"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface truncate">DUCK DUCK COOK</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted truncate">Company Profile</span></div></div><div class="flex items-center gap-space-xs shrink-0"><a class="inline-flex items-center justify-center h-11 px-space-md rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors hover:bg-primary" data-path="login" href="#"><span class="material-symbols-outlined text-[18px] mr-1">login</span>Masuk</a><button aria-label="Menu Utama" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface hover:bg-surface-mint-subtle transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative px-gutter-mobile pt-space-md pb-space-lg flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-mint-subtle text-primary self-start shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Artisanal Poultry &amp; Heritage Spices</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-headline-lg">
+        Cita Rasa Bebek Panggang Autentik &amp; Modern
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Diolah dari rempah nusantara pilihan dengan teknik slow-roast khas DUCK DUCK COOK untuk tekstur empuk, kulit renyah, dan aroma rempah meresap sempurna.
+      </p>
+</div>
+<!-- CTA Group -->
+<div class="flex flex-col gap-space-xs pt-1">
+<a class="inline-flex items-center justify-center h-13 py-3 px-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md active:scale-95 transition-all" href="#kontak-form">
+<span class="material-symbols-outlined mr-2 text-[20px]">restaurant</span>
+        Pesan Sekarang
+      </a>
+<a class="inline-flex items-center justify-center h-13 py-3 px-space-md rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg active:bg-surface-dim transition-colors" href="#layanan-section">
+<span class="material-symbols-outlined mr-2 text-[20px]">menu_book</span>
+        Lihat Menu &amp; Layanan
+      </a>
+</div>
+<!-- Hero Culinary Imagery & Trust Badges -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-md bg-surface-container-low mt-space-xs">
+<img alt="Sajian Bebek Panggang Khas DUCK DUCK COOK" class="w-full h-72 object-cover" data-alt="Appetizing whole roasted duck with deeply caramelized crispy golden-brown skin, served on an elegant artisanal ceramic platter. Garnished with fresh bay leaves, star anise, lemongrass, lime wedges, and rich savory glaze in warm natural daylight, sage green tones #5C7057." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMVH5uDtV6O1pB2TJUC0dKS6Zxg2jfK6DoS86L60SaUxz0SKm0q_VHlQSjV77DyBO6frEabOrykRd-n34-cGg1mwlCfWSDg3wTlCkk56oN4C0PHZnxGRrxFiYudvwFAULe4QqP9KTqhveDSOckBXajXe9Q0SBMuru_xtFTbSdsYYcZ5aofUlb7MEnPl355PXJleI9F4HBKv-VYi2iPfxGS-3sgV92CRr6fQXKwTTVl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-end p-space-md">
+<div class="flex flex-wrap gap-1.5 items-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-cream text-on-surface font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+            100% Halal
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-cream text-on-surface font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">local_shipping</span>
+            Bahan Segar Tiap Hari
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-mint-tint text-on-surface font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            Rating 4.9/5
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT US SECTION -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md bg-surface-container-low">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Tentang Duck Duck Cook</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Dedikasi Dapur Bintang Lima</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Berawal dari dedikasi menghadirkan hidangan bebek berkualitas resto bintang lima dengan harga bersahabat dan higienitas terjamin untuk setiap keluarga Nusantara.
+      </p>
+</div>
+<!-- Kitchen Story Image -->
+<div class="rounded-2xl overflow-hidden shadow-sm bg-surface-cream">
+<img alt="Dapur Artisanal DUCK DUCK COOK" class="w-full h-52 object-cover" data-alt="Passionate master chef in a clean modern culinary uniform carefully carving glistening succulent golden slow-roasted duck with precision on a rustic wooden cutting board, aromatic fresh local herbs in background, warm kitchen lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjgcJVeyGaIuuYpr3_B7lxr6Dmlc5qiSZNkZYJsiXkl4yuk_qTaxzasQYmFp812IOKfdIsPLvwEytB95NJQ1RorRmR6QZga2egOU9AEForTWczlqP9thMsHGuv4N3x0sRGl5uU54ehLTMfaE-5CTmlXRbwEw1Jc9MwUseK0OwPExONRzXSiNvm8-nETK4uCBI_cjRmfmlyGmyT8lw2iY-UOGTO65FnOljNkvgu6hie"/>
+</div>
+<!-- 3 Core Strengths -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-mint-subtle text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">skillet</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm">Resep Warisan Nusantara</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Diracik dengan 18 bumbu rempah alami tanpa bahan pengawet sintetik untuk citarasa yang meresap hingga ke tulang.
+          </p>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-mint-subtle text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">award_star</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm">Daging Segar Berkualitas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Bebek pilihan langsung dari peternak lokal terpercaya setiap pagi, memastikan kesegaran tekstur daging yang padat dan juicy.
+          </p>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-mint-subtle text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">sanitizer</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm">Proses Slow-Roast Higienis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Standar dapur modern berlisensi kebersihan ketat dan sertifikasi Halal resmi dengan durasi panggang perlahan hingga matang optimal.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICES SECTION -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md" id="layanan-section">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Layanan &amp; Solusi Kuliner</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pilihan Menikmati Sajian Kami</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Dari santap santai bersama keluarga hingga kebutuhan perhelatan akbar kantor Anda.
+      </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Service 1 -->
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-mint-subtle text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">table_restaurant</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-bold">In-House Dining</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm mt-1">Dine-in &amp; Resto Eksklusif</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Suasana santap hangat minimalis berpendingin ruangan dengan alunan musik akustik, cocok untuk momen akrab keluarga dan jamuan rekan bisnis.
+        </p>
+</div>
+<!-- Service 2 -->
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-mint-tint text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">celebration</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-mint-subtle text-primary font-bold">Paling Favorit</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm mt-1">Katering Acara &amp; Pesta</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Paket prasmanan atau live-carving station bebek panggang istimewa untuk resepsi pernikahan, syukuran, dan corporate gathering hingga 1.000 porsi.
+        </p>
+</div>
+<!-- Service 3 -->
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-mint-subtle text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">lunch_dining</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-bold">Kantor &amp; Event</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm mt-1">Paket Nasi Kotak &amp; Bento Premium</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Sajian praktis, hangat, dan higienis lengkap dengan nasi daun jeruk, sambal korek khas, urap rempah, dan kemasan eco-friendly food-grade.
+        </p>
+</div>
+<!-- Service 4 -->
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-mint-subtle text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">ac_unit</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-bold">Siap Masak</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm mt-1">Frozen Ready-to-Heat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Kemasan vakum kedap udara tahan beku 3 bulan, praktis dihangatkan via air fryer atau teflon dalam 10 menit tanpa mengurangi kelezatan aslinya.
+        </p>
+</div>
+</div>
+</section>
+<!-- NEWS & ARTICLES SECTION -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md bg-surface-container-low">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Berita &amp; Artikel Terbaru</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Kabar &amp; Ragam Cerita Dapur</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Wawasan kuliner, pembaruan gerai, serta teknik memasak dari chef kami.
+      </p>
+</div>
+<!-- Article 1 -->
+<article class="rounded-2xl overflow-hidden bg-white shadow-sm flex flex-col">
+<img alt="Teknik Slow Roast Bebek" class="w-full h-44 object-cover" data-alt="Close up photography of crackling crispy duck skin glistening with spiced oil glaze on a dark wooden prep surface, highlighting crispy texture and culinary craft." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrZDqbppvP64dNCRIT5CdGU8Mx3y0VyirGjTlswg3Yq4P-UBlhF9eyHfPqz_01F6EYYdQz06RxLAanCK51oPxSDh6ECfdK__cD7nPd54XfvGOa7w_0l0ONGAtOKvcO7kcl1PBkeQTGAMU3n2RXPLZ0iWkpeTkdjjqKRYkdY4ejWdn_juUuzIftJcB2ZW2Mk4zcCbzaMzqPLJKzocRf5r23kFq56OBOCI4lL-ss1QPL"/>
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-text-muted">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="font-label-sm text-label-sm">14 Mei 2024</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm leading-snug">
+          Rahasia Kulit Bebek Crispy dengan Teknik Slow-Roast 6 Jam
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Pelajari filosofi di balik kerenyahan khas menu andalan kami yang memadukan suhu stabil dan aerasi alami.
+        </p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-bold self-start mt-1 group" href="#kontak-form">
+          Baca Selengkapnya
+          <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="rounded-2xl overflow-hidden bg-white shadow-sm flex flex-col">
+<img alt="Gerai Baru Jakarta Selatan" class="w-full h-44 object-cover" data-alt="Modern aesthetic restaurant interior in Jakarta with sage green wall accents, warm ambient pendant lights, comfortable wood seating, and welcoming minimalist dining tables." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB49pah-f3-pPo2jY_Q4RHJ6_RVpaIFgchVXEXktb3vpZ1PXMUxkn60myqGC6nykfz3_bSr_-J80yOmLszL6vF4hf-5wPtDhJ3_L0cZZYNiys9Vd5azyRH7-jmQ7sQA3BuEO5bYIFZnBaiS_UEgS5bScjPCQPqEInA91jxosGFJ-Z3MZXzYW6PPHpCaQurDAIHz_rZHU-MHCQFMrZ4b-uNYqSPX9rE4Zb10XiqrMVjA"/>
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-text-muted">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="font-label-sm text-label-sm">02 Mei 2024</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm leading-snug">
+          DUCK DUCK COOK Resmi Membuka Cabang Baru di Jakarta Selatan
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Hadir lebih dekat memanjakan lidah para pecinta olahan bebek di kawasan Senopati dengan konsep open kitchen.
+        </p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-bold self-start mt-1 group" href="#kontak-form">
+          Baca Selengkapnya
+          <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="rounded-2xl overflow-hidden bg-white shadow-sm flex flex-col">
+<img alt="Menu Sehat Bebek Panggang" class="w-full h-44 object-cover" data-alt="Balanced nutritional bowl featuring carved roast duck breast, steaming organic brown rice, steamed bok choy, fresh cucumber slices, and savory herbal broth bowl." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSAGoLG8bhsEt_7DsnE0uQlsp5Csl1Xg--vzhN87vv5PtueCxt_vRNZ4npat2s5YMEi6KGiKcMHlV5ODUer1UkEOxyibnFfJD4wTTNJQJQ9RksCnr-lCCMTgwjNSp4gIbIsJ82VIgeMP0G4DOszlVoAFEBEqhusr7dAb_2gjUfzFzTEa1e696FY4PSDI73kdsznPdfFm_FV6cW1MGI1I1qEKWnB-qcKwqmIY6mrdH9"/>
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-text-muted">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="font-label-sm text-label-sm">24 Apr 2024</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm leading-snug">
+          Pilihan Menu Sehat: Olahan Bebek Rendah Lemak Kaya Nutrisi
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Fakta nutrisi dan manfaat rempah alami dalam kuliner bebek yang diproses untuk mengurangi kelebihan minyak.
+        </p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-bold self-start mt-1 group" href="#kontak-form">
+          Baca Selengkapnya
+          <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<button class="w-full py-3 rounded-xl bg-surface-mint-subtle text-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-1 shadow-sm" type="button">
+      Lihat Semua Berita
+      <span class="material-symbols-outlined text-[18px]">east</span>
+</button>
+</section>
+<!-- CONTACT & RESERVATION SECTION -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md" id="kontak-form">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Hubungi Kami</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Reservasi &amp; Konsultasi Katering</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Kirimkan rencana kunjungan, pemesanan katering besar, atau pesanan bento boks Anda melalui formulir di bawah.
+      </p>
+</div>
+<!-- Contact Info Cards -->
+<div class="flex flex-col gap-space-xs">
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Alamat Resto</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Jl. Senopati Raya No. 45, Kebayoran Baru, Jakarta Selatan 12190</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">call</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">WhatsApp / Telepon</span>
+<a class="font-body-sm text-body-sm text-primary font-bold" href="https://wa.me/6281234567890">+62 812-3456-7890</a>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">mail</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Email Pelayanan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">halo@duckduckcook.com</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">schedule</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Jam Operasional</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Senin – Minggu: 10.00 – 22.00 WIB</span>
+</div>
+</div>
+</div>
+<!-- Quick Message Form -->
+<div class="p-space-md rounded-2xl bg-white shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+<h3 class="font-title-md text-title-md text-on-surface font-headline-sm">Formulir Pesan Cepat</h3>
+</div>
+<form class="flex flex-col gap-space-sm" id="contactForm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-bold text-on-surface" for="clientName">Nama Lengkap</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-cream text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-white" id="clientName" name="clientName" placeholder="Contoh: Budi Santoso" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-bold text-on-surface" for="clientPhone">Nomor WhatsApp</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-cream text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-white" id="clientPhone" name="clientPhone" placeholder="0812xxxxxxx" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-bold text-on-surface" for="serviceType">Pilihan Layanan</label>
+<select class="w-full h-11 px-3.5 rounded-xl bg-surface-cream text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-white" id="serviceType" name="serviceType">
+<option value="dine-in">Dine-in / Reservasi Meja</option>
+<option value="catering">Katering Acara / Pesta</option>
+<option value="nasi-kotak">Paket Nasi Kotak / Bento</option>
+<option value="frozen">Frozen Ready-to-Heat</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-bold text-on-surface" for="clientMessage">Pesan atau Permintaan Khusus</label>
+<textarea class="w-full p-3 rounded-xl bg-surface-cream text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-white" id="clientMessage" name="clientMessage" placeholder="Tuliskan jumlah porsi, tanggal acara, atau kebutuhan lainnya..." rows="3"></textarea>
+</div>
+<button class="w-full h-12 mt-1 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-all" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+          Kirim Pesan
+        </button>
+</form>
+<div class="hidden p-3 rounded-xl bg-surface-mint-subtle text-primary font-body-sm text-body-sm items-center gap-2 mt-1" id="formSuccessAlert">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Terima kasih! Pesan Anda telah terkirim. Tim kami segera menghubungi Anda via WhatsApp.</span>
+</div>
+</div>
+<!-- Map Preview Card -->
+<div class="flex flex-col gap-2">
+<div class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">pin_drop</span>
+        Lokasi Restoran Kami
+      </div>
+<div class="w-full h-52 bg-cover bg-center rounded-2xl relative overflow-hidden shadow-sm flex flex-col justify-end p-3" data-location="Jl. Senopati Raya No. 45, Kebayoran Baru, Jakarta Selatan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCB_ydhj5vZx3kt6HdMJW_wOb75lWrE4ZuDbnvGNOnmAs8V9wJNGc54GUQNjZDvXuHNr6K2p3XFB9dlL-PDcuSwKfPd8GXJDyw34yx2OtXwHB_uhlfILOKAbbfFITfjOgrg-Mab_zm59SPnYP5woqNMLhz_65Xm9cJe6rIsRmjvE-arhDMKFSy-qBxCWZfcxmbXqSdiXqh_SGQfOK9JHIyhAfrpY2T0sCsPHqTteABE')">
+<div class="p-3 rounded-xl bg-white/95 backdrop-blur-sm shadow-md flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">DUCK DUCK COOK Senopati</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Jakarta Selatan</span>
+</div>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold shrink-0" href="https://maps.google.com/?q=Senopati+Jakarta+Selatan" rel="noopener noreferrer" target="_blank">
+            Buka Peta
+            <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('contactForm');
+    const alertBox = document.getElementById('formSuccessAlert');
+
+    if (form && alertBox) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> Mengirim...';
+        }
+
+        setTimeout(function() {
+          form.reset();
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">send</span> Kirim Pesan';
+          }
+          alertBox.classList.remove('hidden');
+          alertBox.classList.add('flex');
+          setTimeout(function() {
+            alertBox.classList.add('hidden');
+            alertBox.classList.remove('flex');
+          }, 6000);
+        }, 800);
+      });
+    }
+  })();
+</script><footer class="mt-space-xl bg-surface-container-low px-gutter-mobile py-space-xl"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrAo6DTkPFgumU9l5rms-HyYQBf4nLQfOOa4mZN0XquL1m7tCYuPQe13m1795kz_tFz1pzcVsr7m6_90-DUDF8dvXgMt01jjS4DYSB2S2KnRST4Qw7xi6CYM3rlW251PhuWsDDTw2B3tcAHV-Pi0MTHGxxJGe_Qb43QAOeROrUbQDUGF8G75io7EpaokYHCdhHi7eiVQy-M9-CJgNlCZKX_3NZXMzASEG88auAK5LsYn4Jc2o2yJsXFXVdsa"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface">DUCK DUCK COOK</span><span class="font-body-sm text-body-sm text-text-muted">Artisanal Poultry &amp; Heritage Dining</span></div></div><p class="font-body-md text-body-md text-on-surface-variant">Menyajikan cita rasa kuliner bebek rempah Nusantara dengan sentuhan kehangatan modern dan standar dapur artisanal.</p><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Tautan Cepat</span><div class="flex flex-wrap gap-x-space-md gap-y-space-xs text-on-surface-variant font-body-sm text-body-sm"><a class="hover:text-primary transition-colors" data-path="company-profile" href="#">Tentang Kami</a><a class="hover:text-primary transition-colors" data-path="menu-katalog" href="#">Menu Kuliner</a><a class="hover:text-primary transition-colors" data-path="cerita-filosofi" href="#">Filosofi Dapur</a><a class="hover:text-primary transition-colors" data-path="hubungi-reservasi" href="#">Reservasi &amp; Kontak</a></div></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Media Sosial</span><div class="flex items-center gap-space-sm text-on-surface-variant"><a aria-label="Instagram" class="w-11 h-11 rounded-full bg-white flex items-center justify-center text-primary shadow-[0_2px_8px_rgba(92,112,87,0.08)] hover:bg-surface-mint-subtle transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="WhatsApp" class="w-11 h-11 rounded-full bg-white flex items-center justify-center text-primary shadow-[0_2px_8px_rgba(92,112,87,0.08)] hover:bg-surface-mint-subtle transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a><a aria-label="Peta Lokasi" class="w-11 h-11 rounded-full bg-white flex items-center justify-center text-primary shadow-[0_2px_8px_rgba(92,112,87,0.08)] hover:bg-surface-mint-subtle transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">location_on</span></a></div></div><div class="pt-space-md font-body-sm text-body-sm text-text-muted"><p>© 2024 DUCK DUCK COOK Indonesia. Hak Cipta Dilindungi Undang-Undang.</p></div></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="bg-surface-mint-subtle text-primary font-bold"><div class="flex justify-around items-center h-20 px-gutter-mobile"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs py-1 rounded-xl transition-colors bg-surface-mint-subtle text-primary font-bold" data-path="company-profile" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm mt-0.5">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs py-1 rounded-xl text-on-surface-variant transition-colors hover:text-on-surface" data-path="menu-katalog" href="#"><span class="material-symbols-outlined text-[22px]">restaurant_menu</span><span class="font-label-sm text-label-sm mt-0.5">Menu</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs py-1 rounded-xl text-on-surface-variant transition-colors hover:text-on-surface" data-path="cerita-filosofi" href="#"><span class="material-symbols-outlined text-[22px]">local_florist</span><span class="font-label-sm text-label-sm mt-0.5">Filosofi</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs py-1 rounded-xl text-on-surface-variant transition-colors hover:text-on-surface" data-path="hubungi-reservasi" href="#"><span class="material-symbols-outlined text-[22px]">calendar_month</span><span class="font-label-sm text-label-sm mt-0.5">Reservasi</span></a></div></nav></body></html>

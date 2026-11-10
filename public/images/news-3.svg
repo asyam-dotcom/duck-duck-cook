@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="news3Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c6547" />
+      <stop offset="100%" stop-color="#141e15" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#news3Bg)" />
+  <circle cx="400" cy="220" r="160" fill="#5c7057" opacity="0.4" />
+  
+  <g transform="translate(350, 150)" stroke="#FAF9F6" stroke-width="3" fill="none">
+    <ellipse cx="50" cy="80" rx="60" ry="40" fill="#394c35" stroke="#ACC5A6" stroke-width="3" />
+    <path d="M 25 70 Q 50 40 75 70" stroke="#dcf3d4" stroke-width="4" fill="none" />
+    <circle cx="40" cy="65" r="5" fill="#dcf3d4" />
+    <circle cx="60" cy="65" r="5" fill="#dcf3d4" />
+  </g>
+  
+  <text x="400" y="380" font-family="'Epilogue', sans-serif" font-size="24" font-weight="700" fill="#FAF9F6" text-anchor="middle">MENU SEHAT &amp; NUTRISI</text>
+  <text x="400" y="420" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" fill="#ceebc5" text-anchor="middle">Olahan Bebek Rendah Lemak Kaya Protein</text>
+</svg>
+

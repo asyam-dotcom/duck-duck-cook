@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="news2Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#445840" />
+      <stop offset="100%" stop-color="#141e15" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#news2Bg)" />
+  <circle cx="400" cy="220" r="160" fill="#526b4d" opacity="0.4" />
+  
+  <g transform="translate(340, 150)" stroke="#FAF9F6" stroke-width="3" fill="none">
+    <rect x="20" y="30" width="80" height="90" rx="8" fill="#394c35" stroke="#ACC5A6" stroke-width="3" />
+    <polygon points="10,30 60,-10 110,30" fill="#5c7057" stroke="#ACC5A6" stroke-width="3" />
+    <rect x="45" y="70" width="30" height="50" rx="4" fill="#141e15" />
+  </g>
+  
+  <text x="400" y="380" font-family="'Epilogue', sans-serif" font-size="24" font-weight="700" fill="#FAF9F6" text-anchor="middle">GERAI FLAGSHIP BARU</text>
+  <text x="400" y="420" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" fill="#ceebc5" text-anchor="middle">Hadir di Senopati, Jakarta Selatan</text>
+</svg>
+
