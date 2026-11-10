@@ -1038,6 +1038,7 @@ export default function DashboardPage() {
                           src={item.thumbnail_path || "/images/news-1.svg"}
                           alt={item.title}
                           fill
+                          unoptimized
                           className="object-cover"
                         />
                         <span
@@ -1231,6 +1232,7 @@ export default function DashboardPage() {
                       src={newsForm.thumbnail_path || "/images/news-1.svg"}
                       alt="Preview"
                       fill
+                      unoptimized
                       className="object-cover"
                     />
                   </div>
