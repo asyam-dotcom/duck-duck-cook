@@ -453,24 +453,25 @@ export default function DashboardPage() {
   };
 
   const filteredOrders = orders.filter((o) => {
-    const matchesSearch =
-      o.order_code.toLowerCase().includes(orderSearch.toLowerCase()) ||
-      o.customer_name.toLowerCase().includes(orderSearch.toLowerCase()) ||
-      o.customer_phone.includes(orderSearch);
+    const code = String(o.order_code || "").toLowerCase();
+    const name = String(o.customer_name || "").toLowerCase();
+    const phone = String(o.customer_phone || "");
+    const q = orderSearch.toLowerCase();
+    const matchesSearch = code.includes(q) || name.includes(q) || phone.includes(orderSearch);
     const matchesFilter = orderFilter === "all" || o.status === orderFilter;
     return matchesSearch && matchesFilter;
   });
 
   const filteredUsers = users.filter(
     (u) =>
-      u.name.toLowerCase().includes(userSearch.toLowerCase()) ||
-      u.email.toLowerCase().includes(userSearch.toLowerCase())
+      String(u.name || "").toLowerCase().includes(userSearch.toLowerCase()) ||
+      String(u.email || "").toLowerCase().includes(userSearch.toLowerCase())
   );
 
   const filteredNews = news.filter(
     (n) =>
-      n.title.toLowerCase().includes(newsSearch.toLowerCase()) ||
-      n.slug.toLowerCase().includes(newsSearch.toLowerCase())
+      String(n.title || "").toLowerCase().includes(newsSearch.toLowerCase()) ||
+      String(n.slug || "").toLowerCase().includes(newsSearch.toLowerCase())
   );
 
   const pendingOrdersCount = orders.filter((o) => o.status === "menunggu_konfirmasi").length;
@@ -673,7 +674,7 @@ export default function DashboardPage() {
                   const isCancelled = order.status === "dibatalkan";
 
                   // Clean WhatsApp number
-                  const cleanPhone = order.customer_phone.replace(/\D/g, "");
+                  const cleanPhone = String(order.customer_phone || "").replace(/\D/g, "");
                   const waNumber = cleanPhone.startsWith("0") ? `62${cleanPhone.slice(1)}` : cleanPhone;
 
                   return (
@@ -753,7 +754,7 @@ export default function DashboardPage() {
                         <div className="text-left md:text-right">
                           <span className="text-[11px] text-on-surface-variant block">Total Pembayaran:</span>
                           <span className="font-epilogue text-base font-extrabold text-primary">
-                            Rp {order.total_amount?.toLocaleString("id-ID")}
+                            Rp {Number(order.total_amount || 0).toLocaleString("id-ID")}
                           </span>
                         </div>
 

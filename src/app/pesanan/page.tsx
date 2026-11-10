@@ -211,7 +211,7 @@ export default function MyOrdersPage() {
                     <div className="md:col-span-4 flex flex-col md:items-end justify-center">
                       <span className="text-[11px] text-on-surface-variant">Total Pembayaran:</span>
                       <span className="font-epilogue text-lg font-extrabold text-primary">
-                        Rp {order.total_amount?.toLocaleString("id-ID")}
+                        Rp {Number(order.total_amount || 0).toLocaleString("id-ID")}
                       </span>
                     </div>
                   </div>

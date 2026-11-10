@@ -210,6 +210,9 @@ async function callAppsScript(payload: {
         cache: "no-store",
       });
       const json = await response.json();
+      if (!json.success && json.error) {
+        console.error(`[Apps Script Error] Tabel ${payload.table} (${payload.action}):`, json.error);
+      }
       return json;
     } catch (err) {
       console.warn("Gagal menghubungi Google Apps Script, beralih ke mode lokal:", err);

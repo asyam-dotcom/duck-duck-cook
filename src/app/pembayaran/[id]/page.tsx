@@ -140,7 +140,7 @@ export default function PaymentPage() {
                 Total yang Harus Dibayar:
               </span>
               <span className="font-epilogue text-2xl font-extrabold text-primary">
-                Rp {order.total_amount?.toLocaleString("id-ID")}
+                Rp {Number(order.total_amount || 0).toLocaleString("id-ID")}
               </span>
             </div>
 
