@@ -1,7 +1,7 @@
 # Progres Proyek - DUCK DUCK COOK
 
 Terakhir diperbarui: 11 November 2026  
-Posisi saat ini: **STEP 3 - Sistem Pemesanan / Booking & Pembayaran QRIS (Selesai & Terhubung Live)**
+Posisi saat ini: **STEP 4 - Deploy ke Vercel & Mode Maintenance (Aktif)**
 
 ## Checklist
 - [x] Inisiasi (data usaha & desain terkumpul)
@@ -31,9 +31,16 @@ Posisi saat ini: **STEP 3 - Sistem Pemesanan / Booking & Pembayaran QRIS (Selesa
   - [x] Halaman Pembayaran QRIS (`/pembayaran/[id]`) — kode tiket unik, instruksi bayar
   - [x] Halaman & menu navigasi **Pesanan Anda** (`/pesanan`) — khusus pengguna login
   - [x] Tab **Pesanan & Reservasi** di Dashboard Admin — konfirmasi & tombol WhatsApp
-  - [x] API `/api/orders` & `/api/admin/orders` terverifikasi Status 200 & terhubung Google Sheets
-  - [x] Dikonfirmasi pengguna ✅
-- [ ] STEP 4 - Deploy & maintenance (Menunggu konfirmasi untuk mulai)
+  - [x] Dikonfirmasi pengguna
+- [/] STEP 4 - Deploy & maintenance
+  - [x] Inisialisasi Git repository & verifikasi `.gitignore`
+  - [x] Pembuatan dokumen log pemeliharaan `documentation/MAINTENANCE.md`
+  - [x] Verifikasi build produksi Next.js
+  - [ ] Push repository ke GitHub (Langkah Pengguna)
+  - [ ] Konfigurasi Environment Variables di Vercel (Langkah Pengguna)
+  - [ ] Deploy Vercel & pengujian URL produksi
+  - [ ] Ganti kata sandi admin awal di produksi
+  - [ ] Dikonfirmasi pengguna
 
 ## Integrasi Database Aktif
 - **Apps Script URL**: `https://script.google.com/macros/s/AKfycbxes_xWybKzGFFx5w3fqNo0OfLus3Ow8sbRlcHg83W9EOAIqvURslbtHCGQ-Dq4jHA/exec`
