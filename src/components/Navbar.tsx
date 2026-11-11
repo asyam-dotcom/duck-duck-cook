@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import {
   Menu,
@@ -17,34 +17,65 @@ import {
 
 export default function Navbar() {
   const router = useRouter();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [user, setUser] = useState<{ name: string; email: string; role: string } | null>(null);
+  const [isLoadingAuth, setIsLoadingAuth] = useState(true);
+
+  // Fungsi sinkronisasi status login dari server
+  const checkAuth = async () => {
+    try {
+      const res = await fetch("/api/auth/me", { cache: "no-store" });
+      const data = await res.json();
+      if (data.authenticated && data.user) {
+        setUser(data.user);
+      } else {
+        setUser(null);
+      }
+    } catch {
+      setUser(null);
+    } finally {
+      setIsLoadingAuth(false);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
-
-    // Cek status sesi login
-    fetch("/api/auth/me")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.authenticated && data.user) {
-          setUser(data.user);
-        } else {
-          setUser(null);
-        }
-      })
-      .catch(() => setUser(null));
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Periksa status auth setiap kali rute/halaman berubah
+  useEffect(() => {
+    checkAuth();
+  }, [pathname]);
+
+  // Dengarkan custom event 'auth-change' atau saat browser window kembali aktif (focus)
+  useEffect(() => {
+    const handleAuthChange = () => {
+      checkAuth();
+    };
+    window.addEventListener("auth-change", handleAuthChange);
+    window.addEventListener("focus", handleAuthChange);
+    return () => {
+      window.removeEventListener("auth-change", handleAuthChange);
+      window.removeEventListener("focus", handleAuthChange);
+    };
+  }, []);
+
   const handleLogout = async () => {
-    await fetch("/api/auth/logout", { method: "POST" });
+    try {
+      await fetch("/api/auth/logout", { method: "POST" });
+    } catch (err) {
+      console.error("Logout error:", err);
+    }
     setUser(null);
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new Event("auth-change"));
+    }
     router.push("/");
     router.refresh();
   };
@@ -99,7 +130,7 @@ export default function Navbar() {
           ))}
 
           {/* Menu "Pesanan Anda" - Hanya muncul jika sudah login */}
-          {user && (
+          {!isLoadingAuth && user && (
             <Link
               href="/pesanan"
               className="text-sm font-semibold text-primary hover:text-on-surface transition-colors duration-200 py-1 border-b-2 border-primary flex items-center gap-1.5"
@@ -119,7 +150,11 @@ export default function Navbar() {
             <span>Pesan Online</span>
           </Link>
 
-          {user ? (
+          {/* Kondisi Login: Jika sudah login, tombol Masuk HILANG. Jika belum login, tombol Masuk MUNCUL */}
+          {isLoadingAuth ? (
+            <div className="w-20 h-8 rounded-full bg-surface-mint-subtle/50 animate-pulse" />
+          ) : user ? (
+            /* USER SUDAH LOGIN: Tombol Masuk tidak ditampilkan */
             <div className="flex items-center gap-2.5">
               {user.role === "admin" && (
                 <Link
@@ -136,13 +171,15 @@ export default function Navbar() {
               </div>
               <button
                 onClick={handleLogout}
-                title="Keluar"
+                title="Keluar dari akun"
                 className="p-2 rounded-full text-red-600 hover:bg-red-50 transition-colors"
+                aria-label="Keluar dari akun"
               >
                 <LogOut className="w-4 h-4" />
               </button>
             </div>
           ) : (
+            /* USER BELUM LOGIN: Tombol Masuk ditampilkan */
             <Link
               href="/login"
               className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-primary-container text-on-primary text-xs font-bold shadow hover:bg-primary transition-all active:scale-95"
@@ -183,7 +220,7 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {user && (
+            {!isLoadingAuth && user && (
               <Link
                 href="/pesanan"
                 onClick={() => setIsOpen(false)}
@@ -204,8 +241,21 @@ export default function Navbar() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
-              {user ? (
+              {isLoadingAuth ? (
+                <div className="w-full h-10 rounded-full bg-surface-mint-subtle/50 animate-pulse" />
+              ) : user ? (
+                /* USER SUDAH LOGIN DI MOBILE: Tombol Masuk tidak ditampilkan */
                 <>
+                  <div className="flex items-center justify-between px-4 py-2 rounded-xl bg-surface-cream border border-border-soft/40 text-xs text-on-surface">
+                    <span className="font-semibold flex items-center gap-1.5">
+                      <UserIcon className="w-4 h-4 text-primary" />
+                      <span>{user.name}</span>
+                    </span>
+                    <span className="capitalize text-[11px] font-bold px-2 py-0.5 rounded-full bg-surface-mint-subtle text-primary border border-border-soft/30">
+                      {user.role}
+                    </span>
+                  </div>
+
                   {user.role === "admin" && (
                     <Link
                       href="/dashboard"
@@ -228,10 +278,11 @@ export default function Navbar() {
                   </button>
                 </>
               ) : (
+                /* USER BELUM LOGIN DI MOBILE: Tombol Masuk ditampilkan */
                 <Link
                   href="/login"
                   onClick={() => setIsOpen(false)}
-                  className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-surface-cream text-on-surface font-semibold text-xs border border-border-soft/40"
+                  className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-surface-cream text-on-surface font-semibold text-xs border border-border-soft/40 hover:bg-surface-mint-subtle transition-colors"
                 >
                   <span>Masuk ke Akun</span>
                 </Link>

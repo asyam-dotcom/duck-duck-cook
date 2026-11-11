@@ -47,6 +47,10 @@ export default function RegisterPage() {
         return;
       }
 
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new Event("auth-change"));
+      }
+
       router.push("/");
       router.refresh();
     } catch {

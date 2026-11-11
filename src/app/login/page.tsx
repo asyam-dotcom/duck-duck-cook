@@ -34,6 +34,10 @@ export default function LoginPage() {
         return;
       }
 
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new Event("auth-change"));
+      }
+
       if (data.user.role === "admin") {
         router.push("/dashboard");
       } else {
