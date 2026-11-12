@@ -31,3 +31,6 @@ Format pelaporan:
   - Penyempurnaan pengurutan berita otomatis (berita terbaru di urutan pertama) dengan badge eksklusif "Terbaru" dan modal pembaca artikel interaktif.
   - Perbaikan navbar reaktif: tombol "Masuk" otomatis disembunyikan saat pengguna telah login, dan dimunculkan saat belum login.
   - Memasuki Step 4: Persiapan deploy ke Vercel dan mode pemeliharaan berkala.
+- **2026-11-12**:
+  - Menghapus kotak informasi kredensial admin awal (demo) pada halaman login demi privasi & keamanan menjelang rilis produksi.
+

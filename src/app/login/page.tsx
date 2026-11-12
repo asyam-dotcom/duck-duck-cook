@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { siteConfig } from "@/config/site";
-import { Lock, Mail, ArrowRight, AlertCircle, Loader2, KeyRound } from "lucide-react";
+import { Lock, Mail, ArrowRight, AlertCircle, Loader2 } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -130,17 +130,6 @@ export default function LoginPage() {
               )}
             </button>
           </form>
-
-          {/* Akun Admin Bawaan Pill */}
-          <div className="mt-6 p-3.5 rounded-2xl bg-surface-mint-subtle/80 border border-border-soft/40 flex flex-col gap-1 text-xs">
-            <div className="flex items-center gap-1.5 font-bold text-primary">
-              <KeyRound className="w-3.5 h-3.5" />
-              <span>Kredensial Admin Awal (Demo):</span>
-            </div>
-            <p className="text-on-surface-variant text-[11px] font-mono">
-              Email: <b>admin@gmail.com</b> | Pass: <b>123456</b>
-            </p>
-          </div>
 
           {/* Footer Link */}
           <div className="mt-6 text-center text-xs text-on-surface-variant">
